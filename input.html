@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إرسال بريد إلكتروني</title>
+    <link rel="stylesheet" href="input.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "zoFQrkt_C5pvam_6v",
+      });
+   })();
+</script>
+</head>
+<body>
+    <div class="container">
+        <h1>ادخل بريدك الإلكتروني</h1>
+        <form id="emailForm">
+            <label> الاسم  </label>
+            <input type="text" id="name" placeholder="ادخل اسم المرسل إليه" required>
+            <label> الايميل </label>
+            <input type="email" id="user_email" placeholder="ادخل البريد الإلكتروني" required>
+            <label> البريد </label>
+            <input type="text" id="content" placeholder="ادخل محتوى البريد الإلكتروني" required>
+            <button type="submit">إرسال</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="input.js"></script>
+</body>
+</html>
